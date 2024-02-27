@@ -8,20 +8,20 @@ number:
 date:
 consensus: true
 v: 3
-# area: WIT
-# workgroup: HTTPBIS
+area: "Web and Internet Transport"
+workgroup: "HTTP"
 keyword:
  - zstd
  - zstandard
  - content encoding
  - application/zstd
 venue:
-  # group: WG
-  # type: Working Group
-  # mail: WG@example.com
-  # arch: https://example.com/WG
-  github: nidhijaju/draft-zstd-window-size
-  latest: https://nidhijaju.github.io/draft-zstd-window-size/LATEST
+  group: "HTTP"
+  type: "Working Group"
+  mail: "ietf-http-wg@w3.org"
+  arch: "https://lists.w3.org/Archives/Public/ietf-http-wg/"
+  github: "nidhijaju/draft-zstd-window-size"
+  latest: "https://nidhijaju.github.io/draft-zstd-window-size/draft-jaju-httpbis-zstd-window-size.html"
 
 author:
  -
