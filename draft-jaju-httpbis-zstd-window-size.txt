@@ -2,10 +2,11 @@
 
 
 
-HTTP                                                             N. Jaju
+HTTPBIS                                                          N. Jaju
 Internet-Draft                                                    Google
-Intended status: Informational                              4 March 2024
-Expires: 5 September 2024
+Intended status: Informational                           W. F. P. Handte
+Expires: 5 September 2024                           Meta Platforms, Inc.
+                                                            4 March 2024
 
 
               Window Sizing for Zstandard Content Encoding
@@ -30,7 +31,7 @@ About This Document
    may be found at https://datatracker.ietf.org/doc/draft-jaju-httpbis-
    zstd-window-size/.
 
-   Discussion of this document takes place on the HTTP Working Group
+   Discussion of this document takes place on the HTTPBIS Working Group
    mailing list (mailto:ietf-http-wg@w3.org), which is archived at
    https://lists.w3.org/Archives/Public/ietf-http-wg/.
 
@@ -78,7 +79,7 @@ Table of Contents
      5.1.  Content Encoding
    6.  Normative References
    Acknowledgments
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -183,14 +184,25 @@ Acknowledgments
 
    zstd was developed by Yann Collet.
 
-   The author would like to thank Yann Collet, Felix Handte, Klaus Post,
-   Adam Rice, and members of the Web Performance Working Group in the
-   W3C for collaborating on the window size issue and helping to
-   formulate a solution.  Felix Handte and Nick Terrell provided
-   feedback that went into RFC 8478 and RFC 8878.
+   The authors would like to thank Yann Collet, Klaus Post, Adam Rice,
+   and members of the Web Performance Working Group in the W3C for
+   collaborating on the window size issue and helping to formulate a
+   solution.  Also, thank you to Nick Terrell for providing feedback
+   that went into RFC 8478 and RFC 8878.
 
-Author's Address
+Authors' Addresses
 
    Nidhi Jaju
    Google
+   Shibuya Stream, 3 Chome-21-3 Shibuya, Shibuya City, Tokyo
+   150-0002
+   Japan
    Email: nidhijaju@google.com
+
+
+   W. Felix P. Handte
+   Meta Platforms, Inc.
+   380 W 33rd St
+   New York, NY 10001,
+   United States of America
+   Email: felixh@meta.com

@@ -6,6 +6,7 @@
 <meta content="initial-scale=1.0" name="viewport">
 <title>Window Sizing for Zstandard Content Encoding</title>
 <meta content="Nidhi Jaju" name="author">
+<meta content="W. Felix P. Handte" name="author">
 <meta content='
        Deployments of Zstandard, or "zstd", can use different window sizes to limit
 memory usage during compression and decompression. Some browsers and user agents
@@ -1036,7 +1037,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <td class="right">March 2024</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Jaju</td>
+<td class="left">Jaju &amp; Handte</td>
 <td class="center">Expires 5 September 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
@@ -1045,7 +1046,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
 <dt class="label-workgroup">Workgroup:</dt>
-<dd class="workgroup">HTTP</dd>
+<dd class="workgroup">HTTPBIS</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
 <dd class="internet-draft">draft-jaju-httpbis-zstd-window-size-latest</dd>
 <dt class="label-published">Published:</dt>
@@ -1056,11 +1057,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
 <dd class="expires"><time datetime="2024-09-05">5 September 2024</time></dd>
-<dt class="label-authors">Author:</dt>
+<dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
       <div class="author-name">N. Jaju</div>
 <div class="org">Google</div>
+</div>
+<div class="author">
+      <div class="author-name">W. F. P. Handte</div>
+<div class="org">Meta Platforms, Inc.</div>
 </div>
 </dd>
 </dl>
@@ -1084,7 +1089,7 @@ recommendation to a requirement in HTTP contexts.<a href="#section-abstract-1" c
         Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-jaju-httpbis-zstd-window-size/">https://datatracker.ietf.org/doc/draft-jaju-httpbis-zstd-window-size/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
-        HTTP Working Group mailing list (<span><a href="mailto:ietf-http-wg@w3.org">mailto:ietf-http-wg@w3.org</a></span>),
+        HTTPBIS Working Group mailing list (<span><a href="mailto:ietf-http-wg@w3.org">mailto:ietf-http-wg@w3.org</a></span>),
         which is archived at <span><a href="https://lists.w3.org/Archives/Public/ietf-http-wg/">https://lists.w3.org/Archives/Public/ietf-http-wg/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
 <p id="section-note.1-4">Source for this draft and an issue tracker can be found at
         <span><a href="https://github.com/nidhijaju/draft-zstd-window-size">https://github.com/nidhijaju/draft-zstd-window-size</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
@@ -1164,7 +1169,7 @@ recommendation to a requirement in HTTP contexts.<a href="#section-abstract-1" c
             <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1300,23 +1305,40 @@ of not more than 8 MB.<a href="#section-5.1-2.4.1" class="pilcrow">¶</a></p>
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
 <p id="appendix-A-1">zstd was developed by Yann Collet.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
-<p id="appendix-A-2">The author would like to thank Yann Collet, Felix Handte, Klaus Post, Adam Rice,
-and members of the Web Performance Working Group in the W3C for collaborating
-on the window size issue and helping to formulate a solution. Felix Handte
-and Nick Terrell provided feedback that went into RFC 8478 and RFC 8878.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
+<p id="appendix-A-2">The authors would like to thank Yann Collet, Klaus Post, Adam Rice, and members
+of the Web Performance Working Group in the W3C for collaborating on the window
+size issue and helping to formulate a solution. Also, thank you to Nick Terrell
+for providing feedback that went into RFC 8478 and RFC 8878.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
 <section id="appendix-B">
-      <h2 id="name-authors-address">
-<a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
+      <h2 id="name-authors-addresses">
+<a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Nidhi Jaju</span></div>
 <div dir="auto" class="left"><span class="org">Google</span></div>
+<div dir="auto" class="left">
+<span class="street-address">Shibuya Stream, 3 Chome-21-3 Shibuya</span>, <span class="region">Shibuya City, Tokyo</span>
+</div>
+<div dir="auto" class="left"><span class="postal-code">150-0002</span></div>
+<div dir="auto" class="left"><span class="country-name">Japan</span></div>
 <div class="email">
 <span>Email:</span>
 <a href="mailto:nidhijaju@google.com" class="email">nidhijaju@google.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">W. Felix P. Handte</span></div>
+<div dir="auto" class="left"><span class="org">Meta Platforms, Inc.</span></div>
+<div dir="auto" class="left"><span class="street-address">380 W 33rd St</span></div>
+<div dir="auto" class="left">
+<span class="locality">New York, NY 10001</span>,  </div>
+<div dir="auto" class="left"><span class="country-name">United States of America</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:felixh@meta.com" class="email">felixh@meta.com</a>
 </div>
 </address>
 </section>
