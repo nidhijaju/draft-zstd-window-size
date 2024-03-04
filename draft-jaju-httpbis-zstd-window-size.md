@@ -10,7 +10,7 @@ date:
 consensus: true
 v: 3
 area: "Web and Internet Transport"
-workgroup: "HTTP"
+workgroup: "HTTPBIS"
 keyword:
  - zstd
  - zstandard
@@ -18,7 +18,7 @@ keyword:
  - content encoding
  - application/zstd
 venue:
-  group: "HTTP"
+  group: "HTTPBIS"
   type: "Working Group"
   mail: "ietf-http-wg@w3.org"
   arch: "https://lists.w3.org/Archives/Public/ietf-http-wg/"
@@ -29,7 +29,18 @@ author:
  -
     fullname: Nidhi Jaju
     organization: Google
+    street: Shibuya Stream, 3 Chome-21-3 Shibuya
+    region: Shibuya City, Tokyo
+    code: 150-0002
+    country: Japan
     email: nidhijaju@google.com
+ -
+    fullname: W. Felix P. Handte
+    organization: Meta Platforms, Inc.
+    street: 380 W 33rd St
+    city: New York, NY 10001
+    country: US
+    email: felixh@meta.com
 
 normative:
 
@@ -135,8 +146,8 @@ Reference:
 
 zstd was developed by Yann Collet.
 
-The author would like to thank Yann Collet, Felix Handte, Klaus Post, Adam Rice,
-and members of the Web Performance Working Group in the W3C for collaborating
-on the window size issue and helping to formulate a solution. Felix Handte
-and Nick Terrell provided feedback that went into RFC 8478 and RFC 8878.
+The authors would like to thank Yann Collet, Klaus Post, Adam Rice, and members
+of the Web Performance Working Group in the W3C for collaborating on the window
+size issue and helping to formulate a solution. Also, thank you to Nick Terrell
+for providing feedback that went into RFC 8478 and RFC 8878.
 
