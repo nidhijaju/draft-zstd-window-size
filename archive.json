@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-03-07T01:02:21.670023+00:00",
+  "timestamp": "2024-03-10T01:19:43.356251+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -49,6 +49,31 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOLYk9Ys6BnUhZ",
+      "title": "Window Size for `zstd-d`",
+      "url": "https://github.com/nidhijaju/draft-zstd-window-size/issues/1",
+      "state": "OPEN",
+      "author": "felixhandte",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The Compression Dictionary Transport spec introduces a new encoding scheme `zstd-d`. We may want to clarify the window limits for that scheme as well (either in this draft or in the CDT draft).\r\n\r\nProbably the right answer is something like 8 MB or 2 * the dictionary size if one is in use, to allow delta-ing of larger resources.",
+      "createdAt": "2024-03-07T19:03:05Z",
+      "updatedAt": "2024-03-08T02:33:20Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "nidhijaju",
+          "authorAssociation": "OWNER",
+          "body": "That's a good point!\r\nI think in Chrome we ended up using [max(dictionary size, 8 MB)](https://source.chromium.org/chromium/chromium/src/+/main:net/filter/zstd_source_stream.cc;l=49-57;drc=f88f2c49794bb22673f9048f7ee0d0e8279582c7) if a dictionary is in use, or 8 MB otherwise.\r\n\r\nI think that should be added to the Compression Dictionary Transport spec, since it's not published yet and that's where the Content-Encoding token for `zstd-d` is being added. I just filed [an issue](https://github.com/httpwg/http-extensions/issues/2754) there.",
+          "createdAt": "2024-03-08T02:33:18Z",
+          "updatedAt": "2024-03-08T02:33:18Z"
+        }
+      ]
+    }
+  ],
   "pulls": []
 }
