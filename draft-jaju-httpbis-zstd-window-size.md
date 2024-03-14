@@ -108,10 +108,6 @@ MUST support window sizes of up to and including 8 MB and encoders MUST NOT
 generate frames requiring a window size of larger than 8 MB, when using the
 "zstd" Content Encoding token (see {{zstd-iana-token}}).
 
-Decoders are free to support higher or lower limits, depending on local
-limitations, if negotiated out-of-band. Many deployments of Zstandard operate in controlled, private environments and can directly communicate with their encoder
-and decoder to negotiate a higher or lower limit.
-
 # Security Considerations
 
 This document introduces no new security considerations beyond those discussed
