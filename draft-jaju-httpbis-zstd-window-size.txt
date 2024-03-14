@@ -5,8 +5,8 @@
 HTTPBIS                                                          N. Jaju
 Internet-Draft                                                    Google
 Intended status: Informational                           W. F. P. Handte
-Expires: 5 September 2024                           Meta Platforms, Inc.
-                                                            4 March 2024
+Expires: 15 September 2024                          Meta Platforms, Inc.
+                                                           14 March 2024
 
 
               Window Sizing for Zstandard Content Encoding
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 September 2024.
+   This Internet-Draft will expire on 15 September 2024.
 
 Copyright Notice
 
@@ -137,12 +137,6 @@ Table of Contents
    encoders MUST NOT generate frames requiring a window size of larger
    than 8 MB, when using the "zstd" Content Encoding token (see
    Section 5.1).
-
-   Decoders are free to support higher or lower limits, depending on
-   local limitations, if negotiated out-of-band.  Many deployments of
-   Zstandard operate in controlled, private environments and can
-   directly communicate with their encoder and decoder to negotiate a
-   higher or lower limit.
 
 4.  Security Considerations
 
