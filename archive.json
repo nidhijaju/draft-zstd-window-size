@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-03-12T01:14:35.318540+00:00",
+  "timestamp": "2024-03-14T01:15:11.148926+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOLYk9Ys6BnUhZ",
       "title": "Window Size for `zstd-d`",
       "url": "https://github.com/nidhijaju/draft-zstd-window-size/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "felixhandte",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "The Compression Dictionary Transport spec introduces a new encoding scheme `zstd-d`. We may want to clarify the window limits for that scheme as well (either in this draft or in the CDT draft).\r\n\r\nProbably the right answer is something like 8 MB or 2 * the dictionary size if one is in use, to allow delta-ing of larger resources.",
       "createdAt": "2024-03-07T19:03:05Z",
-      "updatedAt": "2024-03-08T02:33:20Z",
-      "closedAt": null,
+      "updatedAt": "2024-03-12T14:39:00Z",
+      "closedAt": "2024-03-12T14:39:00Z",
       "comments": [
         {
           "author": "nidhijaju",
@@ -104,7 +104,7 @@
       "labels": [],
       "body": "Closes https://github.com/nidhijaju/draft-zstd-window-size/issues/2.",
       "createdAt": "2024-03-11T09:20:02Z",
-      "updatedAt": "2024-03-11T09:20:02Z",
+      "updatedAt": "2024-03-12T14:38:38Z",
       "baseRepository": "nidhijaju/draft-zstd-window-size",
       "baseRefName": "main",
       "baseRefOid": "dccbec4f3c8bd009ae3406ffccd592fc21ce57a8",
@@ -116,7 +116,21 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOLYk9Ys5zHMnn",
+          "commit": {
+            "abbreviatedOid": "b131178"
+          },
+          "author": "felixhandte",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "This seems reasonable to me. My only concern is that RFC 8878 is *primarily* the most visible source of truth document for specifying the Zstandard wire format, and then there is one small section that registers that format as a content-encoding. I want to avoid a misinterpretation where this document appears to modify the guidance for *all* Zstandard streams. So I might suggest a little rewording in a different PR. But that certainly doesn't block this removal.",
+          "createdAt": "2024-03-12T14:38:38Z",
+          "updatedAt": "2024-03-12T14:38:38Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
