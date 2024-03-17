@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-03-14T01:15:11.148926+00:00",
+  "timestamp": "2024-03-17T01:20:10.127058+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -79,15 +79,15 @@
       "id": "I_kwDOLYk9Ys6B2zH1",
       "title": "Decoders supporting a different limit",
       "url": "https://github.com/nidhijaju/draft-zstd-window-size/issues/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "nidhijaju",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Based on feedback from https://lists.w3.org/Archives/Public/ietf-http-wg/2024JanMar/0156.html and https://lists.w3.org/Archives/Public/ietf-http-wg/2024JanMar/0157.html, we don't need to have language to talk about decoders being able to support a different window size limit in, for example, private environments, since the draft is scoped to HTTP Content Encoding contexts.\r\n\r\nWe can remove the following paragraph:\r\n\r\n>    Decoders are free to support higher or lower limits, depending on\r\n   local limitations, if negotiated out-of-band.  Many deployments of\r\n   Zstandard operate in controlled, private environments and can\r\n   directly communicate with their encoder and decoder to negotiate a\r\n   higher or lower limit.",
       "createdAt": "2024-03-11T09:16:06Z",
-      "updatedAt": "2024-03-11T09:16:06Z",
-      "closedAt": null,
+      "updatedAt": "2024-03-14T08:28:42Z",
+      "closedAt": "2024-03-14T08:28:42Z",
       "comments": []
     }
   ],
@@ -97,24 +97,26 @@
       "id": "PR_kwDOLYk9Ys5pN3T8",
       "title": "Remove paragraph about decoders being able to support a different limit",
       "url": "https://github.com/nidhijaju/draft-zstd-window-size/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "nidhijaju",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Closes https://github.com/nidhijaju/draft-zstd-window-size/issues/2.",
       "createdAt": "2024-03-11T09:20:02Z",
-      "updatedAt": "2024-03-12T14:38:38Z",
+      "updatedAt": "2024-03-14T08:28:47Z",
       "baseRepository": "nidhijaju/draft-zstd-window-size",
       "baseRefName": "main",
       "baseRefOid": "dccbec4f3c8bd009ae3406ffccd592fc21ce57a8",
       "headRepository": "nidhijaju/draft-zstd-window-size",
       "headRefName": "remove-decoder-different-limit",
       "headRefOid": "b131178fd71bb0a4a70c95aa0628e7ec3ecfc0de",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-03-14T08:28:41Z",
+      "mergedAt": "2024-03-14T08:28:41Z",
+      "mergedBy": "nidhijaju",
+      "mergeCommit": {
+        "oid": "f7e2766a597cb5fee71902bcd85498f0a9d62f85"
+      },
       "comments": [],
       "reviews": [
         {
