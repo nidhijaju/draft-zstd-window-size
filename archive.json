@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-04-30T01:18:27.625795+00:00",
+  "timestamp": "2024-05-02T01:18:35.416876+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -133,6 +133,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOLYk9Ys5uSmKV",
+      "title": "Refactor Language",
+      "url": "https://github.com/nidhijaju/draft-zstd-window-size/pull/4",
+      "state": "OPEN",
+      "author": "felixhandte",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I started making some minor rewordings and stuff, and then wanted to switch over uses of \"window size\" to \"Window_Size\" (which is the name that RFC8878 officially give to the parameter), and then it all snowballed into a large number of edits and a significant refactor of the document.\r\n\r\nLet me know what you think, and if you'd like me to pull this apart into individual changes.",
+      "createdAt": "2024-05-01T21:40:20Z",
+      "updatedAt": "2024-05-01T21:40:21Z",
+      "baseRepository": "nidhijaju/draft-zstd-window-size",
+      "baseRefName": "main",
+      "baseRefOid": "f7e2766a597cb5fee71902bcd85498f0a9d62f85",
+      "headRepository": "felixhandte/draft-zstd-window-size",
+      "headRefName": "refactor-language",
+      "headRefOid": "e559a86fdc6aaf5a7389ba306e8e156b8e8dd8b0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
