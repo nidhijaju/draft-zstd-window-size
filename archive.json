@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-07T01:20:25.698107+00:00",
+  "timestamp": "2024-05-09T01:20:03.052116+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -146,7 +146,7 @@
       "labels": [],
       "body": "I started making some minor rewordings and stuff, and then wanted to switch over uses of \"window size\" to \"Window_Size\" (which is the name that RFC8878 officially give to the parameter), and then it all snowballed into a large number of edits and a significant refactor of the document.\r\n\r\nLet me know what you think, and if you'd like me to pull this apart into individual changes.",
       "createdAt": "2024-05-01T21:40:20Z",
-      "updatedAt": "2024-05-01T21:40:21Z",
+      "updatedAt": "2024-05-07T05:17:51Z",
       "baseRepository": "nidhijaju/draft-zstd-window-size",
       "baseRefName": "main",
       "baseRefOid": "f7e2766a597cb5fee71902bcd85498f0a9d62f85",
@@ -158,7 +158,52 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOLYk9Ys55t1Kj",
+          "commit": {
+            "abbreviatedOid": "e559a86"
+          },
+          "author": "nidhijaju",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "Thanks for the updates! I made a couple of suggestions to merge in wording that had specific reasoning, but looks good overall.",
+          "createdAt": "2024-05-07T04:51:18Z",
+          "updatedAt": "2024-05-07T05:17:51Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "We should keep the above sentence with \"updates {{RFC8878}}\" since updating an RFC is an official process, whereas \"amends the specification\" doesn't have the same meaning.",
+              "createdAt": "2024-05-07T04:54:17Z",
+              "updatedAt": "2024-05-07T05:17:51Z"
+            },
+            {
+              "originalPosition": 32,
+              "body": "```suggestion\r\nDeployments of Zstandard use different Window_Size values\r\n({{!RFC8878, Section 3.1.1.1.2}}) to describe the maximum back-reference distance,\r\nwhich controls the amount of content that must be kept in memory during\r\ndecompression. Larger Window_Size values tend to improve the compression ratio,\r\n```\r\nProposed a diff that combines the two approaches with somewhat cleaner phrasing.\r\nPeople can probably guess at the meaning of \"matches\", but maybe \"back-references\" is better since it's also used in RFC8878?",
+              "createdAt": "2024-05-07T05:07:50Z",
+              "updatedAt": "2024-05-07T05:17:51Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "```suggestion\r\nlimit the maximum Window_Size they will handle. This\r\n```\r\nThis has caused some controversy in the WG in the past, so let's keep negotiation mechanisms out of scope here.",
+              "createdAt": "2024-05-07T05:09:52Z",
+              "updatedAt": "2024-05-07T05:17:51Z"
+            },
+            {
+              "originalPosition": 41,
+              "body": "```suggestion\r\nWindow_Size than the user agent allows, leading to decreased interoperability.\r\n```\r\nEnsuring interoperability is the reason we wrote this draft so let's keep that phrasing here.",
+              "createdAt": "2024-05-07T05:11:17Z",
+              "updatedAt": "2024-05-07T05:17:51Z"
+            },
+            {
+              "originalPosition": 74,
+              "body": "I think it helps to keep some variation of this text here for reading comprehension, especially since the intention of this document is to be the reference point for window size for zstd.",
+              "createdAt": "2024-05-07T05:15:46Z",
+              "updatedAt": "2024-05-07T05:17:51Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
