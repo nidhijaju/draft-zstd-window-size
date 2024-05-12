@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-09T01:20:03.052116+00:00",
+  "timestamp": "2024-05-12T01:28:35.864018+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -146,7 +146,7 @@
       "labels": [],
       "body": "I started making some minor rewordings and stuff, and then wanted to switch over uses of \"window size\" to \"Window_Size\" (which is the name that RFC8878 officially give to the parameter), and then it all snowballed into a large number of edits and a significant refactor of the document.\r\n\r\nLet me know what you think, and if you'd like me to pull this apart into individual changes.",
       "createdAt": "2024-05-01T21:40:20Z",
-      "updatedAt": "2024-05-07T05:17:51Z",
+      "updatedAt": "2024-05-11T15:51:23Z",
       "baseRepository": "nidhijaju/draft-zstd-window-size",
       "baseRefName": "main",
       "baseRefOid": "f7e2766a597cb5fee71902bcd85498f0a9d62f85",
@@ -200,6 +200,44 @@
               "body": "I think it helps to keep some variation of this text here for reading comprehension, especially since the intention of this document is to be the reference point for window size for zstd.",
               "createdAt": "2024-05-07T05:15:46Z",
               "updatedAt": "2024-05-07T05:17:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOLYk9Ys559Oaw",
+          "commit": {
+            "abbreviatedOid": "e559a86"
+          },
+          "author": "felixhandte",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-05-08T16:12:15Z",
+          "updatedAt": "2024-05-11T15:51:23Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "The existing/proposed phrase\r\n\r\n> Deployments of Zstandard use different Window_Size values [...]\r\n\r\nis slightly inaccurate: the `Window_Size` is a property of a frame. Deployments/integrations of Zstandard may or may not constrain the `Window_Size`s they accept or produce, but that's a slightly different thing.\r\n\r\nMaybe that's too pedantic a distinction and we can be a little looser with the language. But in my PR here I've tried to handle that nuance by first describing the `Window_Size` property of frames in this paragraph and then in the next talking about how deployments interact with it. I can make that second paragraph clearer perhaps?",
+              "createdAt": "2024-05-08T16:12:15Z",
+              "updatedAt": "2024-05-11T15:51:23Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "Sounds good.",
+              "createdAt": "2024-05-08T16:12:47Z",
+              "updatedAt": "2024-05-11T15:51:23Z"
+            },
+            {
+              "originalPosition": 41,
+              "body": "Sounds good.",
+              "createdAt": "2024-05-08T16:12:55Z",
+              "updatedAt": "2024-05-11T15:51:23Z"
+            },
+            {
+              "originalPosition": 49,
+              "body": "Aha, ok. Will do.",
+              "createdAt": "2024-05-08T16:13:14Z",
+              "updatedAt": "2024-05-11T15:51:23Z"
             }
           ]
         }
