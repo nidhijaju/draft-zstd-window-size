@@ -66,22 +66,22 @@ token signals to the decoder that the content is Zstandard-compressed.
 
 An important property of Zstandard-compressed content is its Window_Size
 ({{!RFC8878, Section 3.1.1.1.2}}), which describes the maximum distance for
-matches and therefore how much of the content must be kept in memory during
-decompression. Larger Window_Size values tend to improve the compression ratio,
-but at the cost of increased memory usage.
+back-references and therefore how much of the content must be kept in memory
+during decompression. The minimum Window_Size is 1 KB. The maximum Window_Size
+is (1<<41) + 7*(1<<38) bytes, which is 3.75 TB. Larger Window_Size values tend
+to improve the compression ratio, but at the cost of increased memory usage.
 
 To protect against unreasonable memory usage, some browsers and user agents
-limit the maximum Window_Size they will handle. Since the "zstd" Content Coding
-does not specify a negotiation mechanism for the Window_Size to use, this
-causes failures to decode responses if the content is compressed with a larger
-Window_Size than the user agent allows.
+limit the maximum Window_Size they will handle. This causes failures to decode
+responses when the content is compressed with a larger Window_Size than the
+recipient allows, leading to decreased interoperability.
 
 {{!RFC8878, Section 3.1.1.1.2}} recommends that decoders support a Window_Size
 of up to 8 MB, and that encoders not generate frames using a Window_Size larger
 than 8 MB. However, it imposes no requirements.
 
-This document amends the specification of the "zstd" Content Coding in
-{{RFC8878}} to enforce Window_Size limits on the encoder and decoder.
+This document updates {{RFC8878}} to enforce Window_Size limits on the encoder
+and decoder for the "zstd" Content Coding.
 
 
 # Conventions and Definitions
