@@ -67,8 +67,10 @@ token signals to the decoder that the content is Zstandard-compressed.
 An important property of Zstandard-compressed content is its Window_Size
 ({{!RFC8878, Section 3.1.1.1.2}}), which describes the maximum distance for
 back-references and therefore how much of the content must be kept in memory
-during decompression. The minimum Window_Size is 1 KB. The maximum Window_Size
-is (1<<41) + 7*(1<<38) bytes, which is 3.75 TB. Larger Window_Size values tend
+during decompression.
+
+The minimum Window_Size is 1 KB. The maximum Window_Size is
+(1<<41) + 7*(1<<38) bytes, which is 3.75 TB. Larger Window_Size values tend
 to improve the compression ratio, but at the cost of increased memory usage.
 
 To protect against unreasonable memory usage, some browsers and user agents
