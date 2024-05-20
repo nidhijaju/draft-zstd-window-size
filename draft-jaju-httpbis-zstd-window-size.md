@@ -50,10 +50,10 @@ informative:
 --- abstract
 
 Deployments of Zstandard, or "zstd", can use different window sizes to limit
-memory usage during compression and decompression. Some browsers and user agents
-limit window sizes to mitigate memory usage concerns, causing interoperability
-issues. This document updates the window size limit in RFC8878 from a
-recommendation to a requirement in HTTP contexts.
+memory usage during compression and decompression. Some browsers and user
+agents limit window sizes to mitigate memory usage concerns, causing
+interoperability issues. This document updates the window size limit in RFC8878
+from a recommendation to a requirement in HTTP contexts.
 
 
 --- middle
@@ -61,22 +61,29 @@ recommendation to a requirement in HTTP contexts.
 # Introduction
 
 Zstandard, or "zstd", specified in {{?RFC8878}}, is a lossless data compression
-mechanism similar to gzip. When used with HTTP, the "zstd" Content Encoding
+mechanism similar to gzip. When used with HTTP, the "zstd" Content Coding
 token signals to the decoder that the content is Zstandard-compressed.
 
-Deployments of Zstandard can use different window sizes to configure the maximum
-memory a decoder requires to decompress a frame. Larger window sizes tend to
-improve the compression ratio, but cause more memory to be used. {{RFC8878}}
-provides a recommendation for decoders to support window sizes up to 8 MB, and
-for encoders to not generate frames requiring window sizes larger than 8 MB.
-However, it is just a recommendation ({{!RFC8878, Section 3.1.1.1.2}}).
+An important property of Zstandard-compressed content is its Window_Size
+({{!RFC8878, Section 3.1.1.1.2}}), which describes the maximum distance for
+back-references and therefore how much of the content must be kept in memory
+during decompression.
+
+The minimum Window_Size is 1 KB. The maximum Window_Size is
+(1<<41) + 7*(1<<38) bytes, which is 3.75 TB. Larger Window_Size values tend
+to improve the compression ratio, but at the cost of increased memory usage.
 
 To protect against unreasonable memory usage, some browsers and user agents
-limit the maximum window size allowed. This causes incompatibilities if the
-content is compressed with a larger limit, leading to decreased interoperability.
+limit the maximum Window_Size they will handle. This causes failures to decode
+responses when the content is compressed with a larger Window_Size than the
+recipient allows, leading to decreased interoperability.
 
-This document updates {{RFC8878}} to specify a window size limit associated with
-the "zstd" Content Encoding token.
+{{!RFC8878, Section 3.1.1.1.2}} recommends that decoders support a Window_Size
+of up to 8 MB, and that encoders not generate frames using a Window_Size larger
+than 8 MB. However, it imposes no requirements.
+
+This document updates {{RFC8878}} to enforce Window_Size limits on the encoder
+and decoder for the "zstd" Content Coding.
 
 
 # Conventions and Definitions
@@ -85,28 +92,10 @@ the "zstd" Content Encoding token.
 
 # Window Size
 
-Section 3.1.1.1.2 of {{RFC8878}} discusses window sizes in Zstandard.
-The window size provides guarantees about the minimum memory buffer required to
-decompress a frame. This information is important for decoders to allocate
-enough memory.
-
-The minimum window size is 1 KB. The maximum window size is (1<<41) +
-7*(1<<38) bytes, which is 3.75 TB.
-
-In general, larger window size values tend to improve the compression ratio, but
-at the cost of increased memory usage.
-
-To properly decode compressed data, a decoder will need to allocate a buffer of
-at least the window size bytes.
-
-In order to protect decoders from unreasonable memory requirements, a decoder is
-allowed to reject a compressed frame that requests a memory size beyond the
-decoder's authorized range.
-
-To maintain interoperability of Zstandard in HTTP Content Encoding, decoders
-MUST support window sizes of up to and including 8 MB and encoders MUST NOT
-generate frames requiring a window size of larger than 8 MB, when using the
-"zstd" Content Encoding token (see {{zstd-iana-token}}).
+To ensure interoperability of the "zstd" Content Coding, decoders MUST support
+a Window_Size of up to and including 8 MB and encoders MUST NOT generate frames
+requiring a Window_Size larger than 8 MB, when using the "zstd" Content Coding
+(see {{zstd-iana-token}}).
 
 # Security Considerations
 
@@ -127,7 +116,7 @@ Name:
 
 Description:
 
-: A stream of bytes compressed using the Zstandard protocol with a window size
+: A stream of bytes compressed using the Zstandard protocol with a Window_Size
   of not more than 8 MB.
 
 Reference:
@@ -140,7 +129,7 @@ Reference:
 # Acknowledgments
 {:numbered="false"}
 
-zstd was developed by Yann Collet.
+Zstandard was developed by Yann Collet.
 
 The authors would like to thank Yann Collet, Klaus Post, Adam Rice, and members
 of the Web Performance Working Group in the W3C for collaborating on the window
