@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-19T01:28:18.780119+00:00",
+  "timestamp": "2024-05-21T01:21:28.369782+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -139,24 +139,26 @@
       "id": "PR_kwDOLYk9Ys5uSmKV",
       "title": "Refactor Language",
       "url": "https://github.com/nidhijaju/draft-zstd-window-size/pull/4",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "felixhandte",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "I started making some minor rewordings and stuff, and then wanted to switch over uses of \"window size\" to \"Window_Size\" (which is the name that RFC8878 officially give to the parameter), and then it all snowballed into a large number of edits and a significant refactor of the document.\r\n\r\nLet me know what you think, and if you'd like me to pull this apart into individual changes.",
       "createdAt": "2024-05-01T21:40:20Z",
-      "updatedAt": "2024-05-17T19:45:46Z",
+      "updatedAt": "2024-05-20T09:12:31Z",
       "baseRepository": "nidhijaju/draft-zstd-window-size",
       "baseRefName": "main",
       "baseRefOid": "f7e2766a597cb5fee71902bcd85498f0a9d62f85",
       "headRepository": "felixhandte/draft-zstd-window-size",
       "headRefName": "refactor-language",
-      "headRefOid": "56ccd6f5ebb6780895176a126dabebb9e9f6f130",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "9d11ee847cf9a5164c39fdaa8a4b47f7df07f1c3",
+      "closedAt": "2024-05-20T09:12:31Z",
+      "mergedAt": "2024-05-20T09:12:31Z",
+      "mergedBy": "nidhijaju",
+      "mergeCommit": {
+        "oid": "9adc9cde0e60fc72a50ac837261cbd0e48ec916b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -240,6 +242,39 @@
               "updatedAt": "2024-05-11T15:51:23Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOLYk9Ys57INm_",
+          "commit": {
+            "abbreviatedOid": "56ccd6f"
+          },
+          "author": "nidhijaju",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-05-20T09:10:05Z",
+          "updatedAt": "2024-05-20T09:10:05Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "```suggestion\r\nduring decompression.\r\n\r\nThe minimum Window_Size is 1 KB. The maximum Window_Size is\r\n(1<<41) + 7*(1<<38) bytes, which is 3.75 TB. Larger Window_Size values tend\r\nto improve the compression ratio, but at the cost of increased memory usage.\r\n```\r\nEditorial nit: this just improves readability",
+              "createdAt": "2024-05-20T09:10:05Z",
+              "updatedAt": "2024-05-20T09:10:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOLYk9Ys57IOaf",
+          "commit": {
+            "abbreviatedOid": "9d11ee8"
+          },
+          "author": "nidhijaju",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "Just merged an editorial nit, but otherwise looks good.",
+          "createdAt": "2024-05-20T09:11:50Z",
+          "updatedAt": "2024-05-20T09:11:50Z",
+          "comments": []
         }
       ]
     }
