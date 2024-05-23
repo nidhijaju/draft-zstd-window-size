@@ -16,6 +16,7 @@ keyword:
  - zstandard
  - compression
  - content encoding
+ - content coding
  - application/zstd
 venue:
   group: "HTTPBIS"
@@ -61,7 +62,7 @@ from a recommendation to a requirement in HTTP contexts.
 # Introduction
 
 Zstandard, or "zstd", specified in {{?RFC8878}}, is a lossless data compression
-mechanism similar to gzip. When used with HTTP, the "zstd" Content Coding
+mechanism similar to gzip. When used with HTTP, the "zstd" content coding
 token signals to the decoder that the content is Zstandard-compressed.
 
 An important property of Zstandard-compressed content is its Window_Size
@@ -83,7 +84,7 @@ of up to 8 MB, and that encoders not generate frames using a Window_Size larger
 than 8 MB. However, it imposes no requirements.
 
 This document updates {{RFC8878}} to enforce Window_Size limits on the encoder
-and decoder for the "zstd" Content Coding.
+and decoder for the "zstd" content coding.
 
 
 # Conventions and Definitions
@@ -92,10 +93,10 @@ and decoder for the "zstd" Content Coding.
 
 # Window Size
 
-To ensure interoperability of the "zstd" Content Coding, decoders MUST support
-a Window_Size of up to and including 8 MB and encoders MUST NOT generate frames
-requiring a Window_Size larger than 8 MB, when using the "zstd" Content Coding
-(see {{zstd-iana-token}}).
+To ensure interoperability, when using the "zstd" content coding, decoders MUST
+support a Window_Size of up to and including 8 MB, and encoders MUST NOT
+generate frames requiring a Window_Size larger than 8 MB (see
+{{zstd-iana-token}}).
 
 # Security Considerations
 
