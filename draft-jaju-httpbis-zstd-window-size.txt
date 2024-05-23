@@ -5,8 +5,8 @@
 HTTPBIS                                                          N. Jaju
 Internet-Draft                                                    Google
 Intended status: Informational                           W. F. P. Handte
-Expires: 21 November 2024                           Meta Platforms, Inc.
-                                                             20 May 2024
+Expires: 24 November 2024                           Meta Platforms, Inc.
+                                                             23 May 2024
 
 
               Window Sizing for Zstandard Content Encoding
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 November 2024.
+   This Internet-Draft will expire on 24 November 2024.
 
 Copyright Notice
 
@@ -85,7 +85,7 @@ Table of Contents
 
    Zstandard, or "zstd", specified in [RFC8878], is a lossless data
    compression mechanism similar to gzip.  When used with HTTP, the
-   "zstd" Content Coding token signals to the decoder that the content
+   "zstd" content coding token signals to the decoder that the content
    is Zstandard-compressed.
 
    An important property of Zstandard-compressed content is its
@@ -110,7 +110,7 @@ Table of Contents
    requirements.
 
    This document updates [RFC8878] to enforce Window_Size limits on the
-   encoder and decoder for the "zstd" Content Coding.
+   encoder and decoder for the "zstd" content coding.
 
 2.  Conventions and Definitions
 
@@ -122,10 +122,10 @@ Table of Contents
 
 3.  Window Size
 
-   To ensure interoperability of the "zstd" Content Coding, decoders
-   MUST support a Window_Size of up to and including 8 MB and encoders
-   MUST NOT generate frames requiring a Window_Size larger than 8 MB,
-   when using the "zstd" Content Coding (see Section 5.1).
+   To ensure interoperability, when using the "zstd" content coding,
+   decoders MUST support a Window_Size of up to and including 8 MB, and
+   encoders MUST NOT generate frames requiring a Window_Size larger than
+   8 MB (see Section 5.1).
 
 4.  Security Considerations
 
