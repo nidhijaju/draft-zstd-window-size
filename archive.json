@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-23T01:21:31.540960+00:00",
+  "timestamp": "2024-05-26T01:33:31.576857+00:00",
   "repo": "nidhijaju/draft-zstd-window-size",
   "labels": [
     {
@@ -274,6 +274,56 @@
           "body": "Just merged an editorial nit, but otherwise looks good.",
           "createdAt": "2024-05-20T09:11:50Z",
           "updatedAt": "2024-05-20T09:11:50Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOLYk9Ys5wRkrB",
+      "title": "Lowercase content coding",
+      "url": "https://github.com/nidhijaju/draft-zstd-window-size/pull/5",
+      "state": "MERGED",
+      "author": "nidhijaju",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "@martinthomson: I'm wondering if I should also change the \"Content Encoding\" in the title and IANA considerations section name to \"Content Coding\"?",
+      "createdAt": "2024-05-23T03:16:46Z",
+      "updatedAt": "2024-05-23T03:31:06Z",
+      "baseRepository": "nidhijaju/draft-zstd-window-size",
+      "baseRefName": "main",
+      "baseRefOid": "9adc9cde0e60fc72a50ac837261cbd0e48ec916b",
+      "headRepository": "nidhijaju/draft-zstd-window-size",
+      "headRefName": "replace-content-coding",
+      "headRefOid": "d037f6a58cfa4a0abb1aad50339bba6bf8485e56",
+      "closedAt": "2024-05-23T03:31:06Z",
+      "mergedAt": "2024-05-23T03:31:06Z",
+      "mergedBy": "nidhijaju",
+      "mergeCommit": {
+        "oid": "e3f7865a27bce30f3273441a9c10c9b62a6125d0"
+      },
+      "comments": [
+        {
+          "author": "nidhijaju",
+          "authorAssociation": "OWNER",
+          "body": "Makes sense, thank you!",
+          "createdAt": "2024-05-23T03:31:01Z",
+          "updatedAt": "2024-05-23T03:31:01Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOLYk9Ys57i617",
+          "commit": {
+            "abbreviatedOid": "d037f6a"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "\"Content Coding\" would be more correct for the title, but I my understanding is that most people think of this as \"Content Encoding\", for the eponymous header field name.  I'm happy to leave the title as-is.",
+          "createdAt": "2024-05-23T03:28:37Z",
+          "updatedAt": "2024-05-23T03:28:37Z",
           "comments": []
         }
       ]
